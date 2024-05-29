@@ -16,8 +16,8 @@
 1. [O que é o HTML e suas tags? Parte 1: estrutura básica](https://www.alura.com.br/artigos/o-que-e-html-suas-tags-parte-1-estrutura-basica)
 2. [O que é o HTML e suas tags? Parte 2: elementos inline](https://www.alura.com.br/artigos/o-que-e-html-suas-tags-parte-2-elementos-inline)
 3. [O que é o HTML e suas tags? Parte 3: elementos block-level](https://www.alura.com.br/artigos/html-tags-elementos-block-level)--->
-4. [Flexbox CSS: Guia Completo, Elementos e Exemplos](https://www.alura.com.br/artigos/css-guia-do-flexbox) <br>
-5. [Criando componentes CSS com o padrão BEM](https://www.alura.com.br/artigos/criando-componentes-css-com-padrao-bem) <br>
+4. [Guia de Unidades no CSS](https://www.alura.com.br/artigos/guia-de-unidades-no-css) <br>
+5. [Qual a diferença entre id e class?](https://www.alura.com.br/artigos/qual-diferenca-entre-id-e-class) <br>
 
 <h1>Referências externas</h1>
 
