@@ -1,45 +1,314 @@
-:root {
-  --text-color: #667085;
-}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
 }
 
-body {
-  width: 100%;
-  height: 100vh;
+:root {
+    --vermelho: #8E2424;
+    --background: rgba(196, 25, 25, 0.03);
+    --footer: #F9FAFB;
+    --text-color: #667085;
+    --title-color: #101828;
 }
 
-nav {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 1rem 0;
+/* ---------- ESTILIZAÇÃO GENERALIZADA ---------- */
+
+header, section, footer {
+    width: 100%;
+    max-width: 1440px;
+    padding: 2rem 3rem;
+    margin: auto;
 }
 
-.links a {
-  color: var(--text-color);
-  text-decoration: none;
-  margin-right: 2rem;
+h1, h2, h3, h4 {
+    color: var(--title-color);
 }
 
-button {
-  padding: 0.8rem 1rem;
-  cursor: pointer;
-  border: none;
-  border-radius: 0.5rem;
-  font-weight: 500;
-  background: none;
-  color: var(--text-color);
-  font-size: 0.9rem;
+p, span, a {
+    color: var(--text-color);
+    text-decoration: none;
 }
 
-button#signUp {
-  background-color: #8E2424;
-  color: #FFF;
+/* --------------------------------------------- */
+
+
+/* ---------- ESTILIZAÇÕES ESPECIFICAS ---------- */
+
+header {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+header > div#logo {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    cursor: pointer;
+}
+header > div#logo > a {
+    color: var(--title-color);
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+header > ul {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    list-style-type: none;
+}
+header > ul li > a {
+    font-size: .9rem;
+    font-weight: 500;
+}
+header > ul li > a:hover {
+    color: var(--vermelho);
+}
+header > div#buttons {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+header > div#buttons > button {
+    padding: .6rem 1rem;
+    border: none;
+    border-radius: 6px;
+    font-size: .9rem;
+    font-weight: 500;
+    background-color: transparent;
+    cursor: pointer;
+}
+header > div#buttons > #cad {
+    background-color: var(--vermelho);
+    color: #fff;
+}
+header > div#buttons > #cad:hover {
+    background-color: #c42e2e;
+    color: #fff;
 }
 
+
+section#first {
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+section#first > span {
+    font-weight: 700;
+    color: var(--vermelho);
+    text-align: center;
+}
+section#first > h1 {
+    font-size: 2.7rem;
+    text-align: center;
+}
+section#first > p {
+    width: 65%;
+    font-size: 1.15rem;
+    text-align: center;
+}
+
+
+section#second {
+    min-height: 40vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1.4rem;
+}
+section#second > article {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: .5rem;
+}
+section#second > article > span.numbers {
+    font-size: 3.8rem;
+    font-weight: 600;
+    color: var(--vermelho);
+}
+section#second > article > h3 {
+    font-weight: 600;
+}
+
+
+section#third {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+section#third > article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+}
+section#third > article > div#article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+section#third > article > div#article > span {
+    font-size: .9rem;
+    font-weight: 700;
+    padding: .2rem .6rem;
+    border-radius: 20px;
+    color: var(--vermelho);
+    background-color: rgba(142, 36, 36, 0.05);;
+}
+section#third > article > div#article > h2 {
+    font-size: 2.05rem;
+}
+section#third > article > div#article > p {
+    font-size: 1.2rem;
+}
+section#third > article > img {
+    width: 100%;
+}
+
+
+section#fourth {
+    min-height: 116vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 4rem;
+}
+section#fourth > div.container {
+    /* background-color: #c42e2e; */
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+section#fourth > div.container > h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+section#fourth > div.container > div.items {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 3rem;
+    border: thin solid #EAECF0;
+    border-radius: 16px;
+    padding: 1.5rem;
+}
+section#fourth > div.container > div.items > h4 {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+section#fourth > div.container > div.items > div.row {
+    display: flex;
+    gap: 1.5rem;
+}
+
+
+section#fifth {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+section#fifth > article {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 4rem;
+    background-color: var(--background);
+}
+section#fifth > article > div.items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .2rem;
+}
+section#fifth > article > div.items > span#we, 
+section#fifth > article > div.items > img {
+    margin-bottom: .8rem;
+}
+section#fifth > article > div.items > span#we {
+    font-size: .9rem;
+    font-weight: 700;
+    color: var(--vermelho);
+}
+section#fifth > article > div.items > p {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--title-color);
+    font-weight: 600;
+}
+section#fifth > article > div.items > span#name {
+    color: var(--title-color);
+    font-weight: 600;
+}
+section#fifth > article > div.items > span#job {
+    font-size: .9rem;
+}
+
+
+footer {
+    min-height: 40vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    background-color: var(--footer);
+}
+footer > div#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+footer > div#container > h3 {
+    font-size: 1.9rem;
+}
+footer > div#container > p {
+    font-size: 1.1rem;
+}
+footer > div#container > div#register {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+footer > div#container > div#register > input {
+    padding: .6rem 1rem;
+    border-radius: 6px;
+    border: thin solid #667085;
+    font-size: .9rem;
+}
+footer > div#container > div#register > input[type=email] {
+    width: 56%;
+}
+footer > div#container > div#register > input[type=submit] {
+    background-color: var(--vermelho);
+    border-color: var(--vermelho);
+    color: #fff;
+    font-weight: 500;
+}
+footer > div#container > div#register > input[type=submit]:hover {
+    background-color: #c42e2e;
+    cursor: pointer;
+}
+footer > span#copyright {
+    font-size: .85rem;
+}
